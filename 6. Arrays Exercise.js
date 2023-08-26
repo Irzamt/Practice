@@ -52,22 +52,43 @@
 // 4 - Moving an Element
 /********************************************************************************************************************** */
 
-function move(array, index, offset){
-    const position = index + offset;
-    if (position >= array.length || position < 0){
-        console.error('Invalid Offset');
-        return
-    }
+// function move(array, index, offset){
+//     const position = index + offset;
+//     if (position >= array.length || position < 0){
+//         console.error('Invalid Offset');
+//         return
+//     }
 
-    const output = [...array];
-    const element = output.splice(index, 1,) [0];
-    output.splice(index + offset, 0, element);
-    return output;
-}
+//     const output = [...array];
+//     const element = output.splice(index, 1,) [0];
+//     output.splice(index + offset, 0, element);
+//     return output;
+// }
 
-const numbers4 = [1,2,3,4];
-const output1 = move(numbers4, 1, 1);
-console.log(output1);
-
-// 5 - 
+// const numbers4 = [1,2,3,4];
+// const output1 = move(numbers4, 1, 1);
+// console.log(output1);
 /********************************************************************************************************************** */
+
+// 5 - Count Occurences
+/********************************************************************************************************************** */
+
+// const numbers5 = [1, 2, 3, 4, 1];
+// const count = countOccurences(numbers5, 1);
+// console.log(count);
+
+// function countOccurences(array, searchElement){
+//     // let count = 0;
+//     // for (let i = 0; i <= array.length; i++){
+//     //     if (array[i] === searchElement){
+//     //         count++;
+//     //     }
+//     // }
+//     // return count;
+
+//     // return array.reduce((accumulator, current) => { // By reduce method
+//     //     const occurence = (current === searchElement) ? 1 : 0;
+//     //     console.log(accumulator, current, searchElement);
+//     //     return accumulator + occurence;
+//     // }, 0);
+// }
