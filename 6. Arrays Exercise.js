@@ -97,22 +97,41 @@
 // 6 - Get Max
 /********************************************************************************************************************** */
 
-function max(array){
-    if (array.length === 0)
-        return undefined;
+// function max(array){
+//     if (array.length === 0)
+//         return undefined;
 
-    // let max = array[0];
+//     // let max = array[0];
 
-    // for (let i = 0; i < array.length; i++){
-    //     if (array[i] > max)
-    //         max = array[i];
-    // }
-    // return max;
+//     // for (let i = 0; i < array.length; i++){
+//     //     if (array[i] > max)
+//     //         max = array[i];
+//     // }
+//     // return max;
 
-    return array.reduce((a, b) => (a > b) ? a : b); // By reduce Method
-}
+//     return array.reduce((a, b) => (a > b) ? a : b); // By reduce Method
+// }
 
 
-const numbers6= [1, 2, 3, 4];
-const output2 = max(numbers6);
-console.log(output2);
+// const numbers6= [1, 2, 3, 4];
+// const output2 = max(numbers6);
+// console.log(output2);
+/********************************************************************************************************************** */
+
+// 7 - Movies
+/********************************************************************************************************************** */
+
+const movies = [
+    {title: 'a', year: 2018, rating: 4.5},
+    {title: 'b', year: 2018, rating: 4.7},
+    {title: 'c', year: 2018, rating: 3},
+    {title: 'd', year: 2017, rating: 4.5},
+];
+
+const titles = movies
+    .filter(m => m.year ===  2018 && m.rating >= 4)
+    .sort((a, b) => a.rating - b.rating)
+    .reverse()
+    .map(m => m.title);
+
+console.log(titles);
