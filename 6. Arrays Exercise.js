@@ -92,3 +92,27 @@
 //     //     return accumulator + occurence;
 //     // }, 0);
 // }
+/********************************************************************************************************************** */
+
+// 6 - Get Max
+/********************************************************************************************************************** */
+
+function max(array){
+    if (array.length === 0)
+        return undefined;
+
+    // let max = array[0];
+
+    // for (let i = 0; i < array.length; i++){
+    //     if (array[i] > max)
+    //         max = array[i];
+    // }
+    // return max;
+
+    return array.reduce((a, b) => (a > b) ? a : b); // By reduce Method
+}
+
+
+const numbers6= [1, 2, 3, 4];
+const output2 = max(numbers6);
+console.log(output2);
