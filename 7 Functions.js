@@ -83,3 +83,26 @@ take all of them and  put them in an array*/
 
 // 5 - Default Parameters
 /********************************************************************************************************************* */
+// function interest (principal, rate = 3.5, years = 5){
+//     return principal * rate / 100 * years;
+// }
+// console.log(interest(10000));    
+
+/* For best practice, whenever we want to use the function parameter a default value, make sure that parameter is last parameter
+in the list, or give all the parameters after that a default value*/
+/********************************************************************************************************************* */
+
+// 6 - Getters and Setters
+/********************************************************************************************************************* */
+// const person = {
+//     firstName: 'Irzam',
+//     lastName: 'Tahir',
+//     fullName() { // Method
+//          return `${person.firstName} ${person.lastName}`
+//     } 
+// };
+
+// console.log(person.fullName());
+
+/* getters => access Properties
+   setters => change (mutate) them*/
