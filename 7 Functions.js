@@ -86,7 +86,7 @@ take all of them and  put them in an array*/
 // function interest (principal, rate = 3.5, years = 5){
 //     return principal * rate / 100 * years;
 // }
-// console.log(interest(10000));    
+// console.log(interest(10000));
 
 /* For best practice, whenever we want to use the function parameter a default value, make sure that parameter is last parameter
 in the list, or give all the parameters after that a default value*/
@@ -97,12 +97,70 @@ in the list, or give all the parameters after that a default value*/
 // const person = {
 //     firstName: 'Irzam',
 //     lastName: 'Tahir',
-//     fullName() { // Method
+//     get fullName() { //getter
 //          return `${person.firstName} ${person.lastName}`
-//     } 
+//     },
+//     set fullName (value){
+//       const parts = value.split(' ');
+//       this.firstName = parts[0];
+//       this.lastName = parts[1];
+//     }
 // };
 
-// console.log(person.fullName());
+// person.fullName = 'Mosh Hamedani';
 
-/* getters => access Properties
-   setters => change (mutate) them*/
+// console.log(person);
+
+// /* getters => access Properties
+//    setters => change (mutate) them*/
+/********************************************************************************************************************* */
+
+// 7 - Try and Catch (Error Handling)
+/********************************************************************************************************************* */
+// const person = {
+//        firstName: 'Irzam',
+//        lastName: 'Tahir',
+//        get fullName() { //getter
+//             return `${person.firstName} ${person.lastName}`
+//        },
+//        set fullName (value){
+//          const parts = value.split(' ');
+//          this.firstName = parts[0];
+//          this.lastName = parts[1];
+//        }
+//    };
+
+//    person.fullName = true;
+
+//    console.log(person); // Gives error because we have applied methods that are used on strings and can't be used on booleans and any other data type
+
+/* In situations like this, we should do error handling at the begining of a function or a method, this is what we call
+defensive programming. So we want to make sure that values coming in are valid so, we can excute our logic*/
+
+// const person = {
+//   firstName: "Irzam",
+//   lastName: "Tahir",
+//   get fullName() {
+//     //getter
+//     return `${person.firstName} ${person.lastName}`;
+//   },
+//   set fullName(value) { //setter
+//     if (typeof value !== "string") throw new Error("Value is not a string.");
+
+//     const parts = value.split(" ");
+//     if (parts.length !== 2)
+//       throw new Error ('Enter a first and last name');
+
+//     this.firstName = parts[0];
+//     this.lastName = parts[1];
+//   },
+// };
+
+// try{
+//    person.fullName = '';
+// }
+// catch (e){
+//    alert (e);
+// }
+
+// console.log(person);
