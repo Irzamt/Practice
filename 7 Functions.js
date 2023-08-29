@@ -88,8 +88,10 @@ take all of them and  put them in an array*/
 // }
 // console.log(interest(10000));
 
-/* For best practice, whenever we want to use the function parameter a default value, make sure that parameter is last parameter
-in the list, or give all the parameters after that a default value*/
+/* 
+For best practice, whenever we want to use the function parameter a default value, make sure that parameter is last parameter
+in the list, or give all the parameters after that a default value
+*/
 /********************************************************************************************************************* */
 
 // 6 - Getters and Setters
@@ -134,8 +136,10 @@ in the list, or give all the parameters after that a default value*/
 
 //    console.log(person); // Gives error because we have applied methods that are used on strings and can't be used on booleans and any other data type
 
-/* In situations like this, we should do error handling at the begining of a function or a method, this is what we call
-defensive programming. So we want to make sure that values coming in are valid so, we can excute our logic*/
+/* 
+In situations like this, we should do error handling at the begining of a function or a method, this is what we call
+defensive programming. So we want to make sure that values coming in are valid so, we can excute our logic
+*/
 
 // const person = {
 //   firstName: "Irzam",
@@ -164,3 +168,63 @@ defensive programming. So we want to make sure that values coming in are valid s
 // }
 
 // console.log(person);
+/********************************************************************************************************************* */
+
+// 8 - Local v/s Gobal Scope
+// 9 - let v/s var
+/********************************************************************************************************************* */
+/* 
+var => function-scoped
+ES6 (ES2015): let, const => block-scoped
+*/ 
+/********************************************************************************************************************* */
+
+// 10 - This keyword
+/********************************************************************************************************************* */
+/*
+The object what is executing the current function
+*/
+/*
+method -> obj
+function -> global (window, global)
+*/
+
+// const video = {
+//    title: 'a',
+//    play() {
+//       console.log(this);
+//    }
+// };
+
+// function Video(title){
+//    this.title = title;
+//    console.log(this);
+// }
+
+// const v = new Video ('b');
+//-------------------------------------------------------------------------------------------------------------
+// const video = {
+//    title: 'b',
+//    tags: ['a', 'b', 'c'],
+//    showTags(){
+//       this.tags.forEach(function(tag){
+//          console.log(this.title, tag); 
+//       }, this)
+//    }
+// };
+
+// video.showTags()
+/********************************************************************************************************************* */
+
+// 11 - Changing this
+/********************************************************************************************************************* */
+// function playVideo(a, b){
+//    console.log(this);
+// }
+
+// playVideo.call({ name: 'Irzam' }, 1, 2);
+// playVideo.apply({ name: 'Irzam' }, [1, 2]);
+// const fn = playVideo.bind({ name: 'Irzam' });
+// fn();
+
+// playVideo();
