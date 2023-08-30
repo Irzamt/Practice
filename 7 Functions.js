@@ -97,8 +97,8 @@ in the list, or give all the parameters after that a default value
 // 6 - Getters and Setters
 /********************************************************************************************************************* */
 const person = {
-    firstName: 'Irzam',
-    lastName: 'Tahir',
+    // firstName: 'Irzam',
+    // lastName: 'Tahir',
     accBal: 45000,
     get accountBalance(){
         return this.accBal;
