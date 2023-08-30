@@ -96,25 +96,40 @@ in the list, or give all the parameters after that a default value
 
 // 6 - Getters and Setters
 /********************************************************************************************************************* */
-// const person = {
-//     firstName: 'Irzam',
-//     lastName: 'Tahir',
-//     get fullName() { //getter
-//          return `${person.firstName} ${person.lastName}`
-//     },
-//     set fullName (value){
-//       const parts = value.split(' ');
-//       this.firstName = parts[0];
-//       this.lastName = parts[1];
-//     }
-// };
+const person = {
+    firstName: 'Irzam',
+    lastName: 'Tahir',
+    accBal: 45000,
+    get accountBalance(){
+        return this.accBal;
+    },
+    // get getFullName() { //getter
+    //      return `${person.firstName} ${person.lastName}`
+    // },
+    // set fullName (value){
+    //   const parts = value.split(' ');
+    //   this.firstName = parts[0];
+    //   this.lastName = parts[1];
+    // }
+    set setAccountBalance(value){
+        if (typeof value !== 'number' )
+            throw new Error('Value should be a number');
+        if (value < 0)
+            throw new Error('Amount should be valid');
+
+        this.accBal = this.accBal - value;
+    }
+};
 
 // person.fullName = 'Mosh Hamedani';
+// person.accBal = 'Ali';
+// person.accountBalance = 17000;
+person.setAccountBalance = 50;
 
-// console.log(person);
+console.log(person.accountBalance);
 
-// /* getters => access Properties
-//    setters => change (mutate) them*/
+/* getters => access Properties
+   setters => change (mutate) them*/
 /********************************************************************************************************************* */
 
 // 7 - Try and Catch (Error Handling)
@@ -131,7 +146,6 @@ in the list, or give all the parameters after that a default value
 //          this.lastName = parts[1];
 //        }
 //    };
-
 //    person.fullName = true;
 
 //    console.log(person); // Gives error because we have applied methods that are used on strings and can't be used on booleans and any other data type
@@ -166,7 +180,6 @@ defensive programming. So we want to make sure that values coming in are valid s
 // catch (e){
 //    alert (e);
 // }
-
 // console.log(person);
 /********************************************************************************************************************* */
 
@@ -203,7 +216,7 @@ function -> global (window, global)
 
 // const v = new Video ('b');
 //-------------------------------------------------------------------------------------------------------------
-// const video = {
+// const video2 = {
 //    title: 'b',
 //    tags: ['a', 'b', 'c'],
 //    showTags(){
