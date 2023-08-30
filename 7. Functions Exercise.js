@@ -17,12 +17,12 @@
 /****************************************************************************************************************** */
 
 // 2 - Area of Circle
-/****************************************************************************************************************** */
+/**************************************************************************************************************** */
 // const circle = {
 //     radius: 1,
 //     get getRadius(){
 //         return this.radius;
-//     }, 
+//     },
 //     set setRadius(value){
 //         return value;
 //     },
@@ -37,3 +37,25 @@
 // circle.radius = 2;
 
 // console.log(circle.getArea);
+/**************************************************************************************************************** */
+
+// 3 - Error Handling
+/**************************************************************************************************************** */
+function countOccurences(array, searchElement) {
+    if (!Array.isArray(array))
+        throw new Error('Invalid array');
+
+    return array.reduce((a, b) => {
+        const occurence = b === searchElement ? 1 : 0;
+        return a + occurence;
+  }, 0);
+};
+
+try{
+    const numbers = [1,2,3,4,1];
+    const count = countOccurences(null, 1);
+    console.log(count); 
+}
+catch (e){
+    console.log(e.message);
+}
