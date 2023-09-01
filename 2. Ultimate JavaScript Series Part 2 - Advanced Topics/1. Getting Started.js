@@ -11,5 +11,5 @@ A programming paradigm centered around objects rather than functions
 1. Encapsulation --> we group related variables and functions together and this way we can reduce complexity and increases reusability
 2. Abstraction --> we hide the details and complexity and show only the essentials and isolate the impact of changes in the code
 3. Inheritance --> we can eliminate the redundant code
-4. Polymorphism --> Refactor ugly switch/case statements
-*/ 
+4. Polymorphism --> Refactor ugly switch case
+*/
